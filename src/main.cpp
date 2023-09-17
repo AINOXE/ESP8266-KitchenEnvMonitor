@@ -6,21 +6,31 @@
 
 void setup()
 {
+    /* 串口初始化 */
     Serial.begin(921600);
+    /* 文件系统初始化 */
     FileSystem_Init();
+    /* 系统配置初始化 */
     SystemConfig_Init();
+    /* 外设初始化 */
     PeripheralDevices_Init();
+    /* Oled显示屏初始化 */
     OledDisplay_Init();
+    /* 网络初始化 */
     Network_Init();
+    /* Web服务器初始化 */
     WebServer_Init();
+    /* 邮件发送处理器初始化 */
     EmailSendHandler_Init();
-    // SendEmail(SystemConfig["alarm_email"].as<String>().c_str(), "系统启动", "启动！");
 }
 
 void loop()
 {
+    /* 光灯延时时间计数 */
     static unsigned int lampCloseTime = 0;
+    /* 处理Web客户端的请求 */
     WebServer.handleClient();
+    /* 外设数据采集循环 */
     PeripheralDevices_GetDataLoop();
 
 #pragma region 配置获取
