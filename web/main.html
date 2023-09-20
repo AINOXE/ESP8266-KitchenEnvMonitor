@@ -590,7 +590,7 @@
           .then(resp => {
             lampImgControl(state);
           }).catch(ex => {
-            alert("操作失败!" + ex);
+            alert("操作失败!"  + ex.message);
             if (state)
               btn_lamp_off.checked = true;
             else
@@ -623,7 +623,7 @@
           .then(resp => {
             fanImgControl(state);
           }).catch(ex => {
-            MsgBoxShow("排风扇控制", "操作失败,请检查网络!" + ex);
+            MsgBoxShow("排风扇控制", "操作失败,请检查网络!"  + ex.message);
             if (state)
               btn_fan_off.checked = true;
             else
@@ -760,7 +760,7 @@
             in_wifi_sta_mask.value = data.netmask;
             in_wifi_sta_gt.value = data.gateway;
           }).catch(ex => {
-            MsgBoxShowLoadingResult("获取失败，请检查网络!" + ex);
+            MsgBoxShowLoadingResult("获取失败，请检查网络!"  + ex.message);
           })
       }
       function setWiFiStaticIp() {
@@ -779,7 +779,7 @@
           .then(data => {
             MsgBoxShowLoadingResult("设置成功!");
           }).catch(ex => {
-            MsgBoxShowLoadingResult("设置失败,请检查网络!" + ex);
+            MsgBoxShowLoadingResult("设置失败,请检查网络!"  + ex.message);
           })
       }
       function isValidIP(ip) {
