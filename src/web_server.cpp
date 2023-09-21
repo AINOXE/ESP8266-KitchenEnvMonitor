@@ -36,7 +36,7 @@ void WebServer_Init()
     MapUri("/api/dev/datas", HTTP_GET)
     {
         char buf[512];
-        //Serial.printf("light: %.0f,%.1f",DevicesData.Light,DevicesData.Light);
+        // Serial.printf("light: %.0f,%.1f",DevicesData.Light,DevicesData.Light);
         sprintf(buf,
                 "{\"temperature\":%.1f,\"humidity\":%.1f,\"light\":%.1f,\"body\":%d,\"fire\":%d,\"natural_gas\":%.1f,\"fan\":%d,\"lamp\":%d}",
                 DevicesData.Temperature,
@@ -83,7 +83,7 @@ void WebServer_Init()
         SystemConfig["no_body_close_lamp_time"] = no_body_close_lamp_time;
         SystemConfig["natural_gas_alarm"] = natural_gas_alarm;
         SystemConfig["alarm_email"] = alarm_email;
-        
+
         Serial.printf("设置应用程序配置API: "
                       "\n\t自动开灯光照值=%d"
                       "\n\t自动关灯光照值=%d"
@@ -142,17 +142,17 @@ void WebServer_Init()
         WebServer.send(303);
     });
     /* 系统重启API */
-    MapUri("/api/sys/restart",HTTP_GET)
+    MapUri("/api/sys/restart", HTTP_GET)
     {
         Serial.println("系统重启API: 重启中...");
-        WebServer.send(200,CONTENT_TYPE_JSON,WEB_RESULT_SUCCESS_JSON);
+        WebServer.send(200, CONTENT_TYPE_JSON, WEB_RESULT_SUCCESS_JSON);
         system_restart();
     });
     /* 系统重置API */
-    MapUri("/api/sys/restore",HTTP_GET)
+    MapUri("/api/sys/restore", HTTP_GET)
     {
         Serial.println("系统重置API: 重置中...");
-        WebServer.send(200,CONTENT_TYPE_JSON,WEB_RESULT_SUCCESS_JSON);
+        WebServer.send(200, CONTENT_TYPE_JSON, WEB_RESULT_SUCCESS_JSON);
         LittleFS.remove(SYSTEM_CONFIG_PATH);
         system_restart();
     });
@@ -288,16 +288,28 @@ void WebApi_File_Download()
     String uri = WebServer.uri();
     if (!LittleFS.exists(uri))
     {
-        Serial.printf("文件下载-失败: 文件 %s 不存在\n", uri.c_str());
+        Serial.printf("文件下载-404: 文件 %s 不存在\n", uri.c_str());
         WebServer.send(404, CONTENT_TYPE_TEXT, "文件不存在！");
         return;
     }
     File downloadFile = LittleFS.open(uri, "r");
-    Serial.printf("文件下载-开始: %s 发送中...\n", uri.c_str());
+    Serial.printf("文件下载-开始: %s  发送中...\n", uri.c_str());
 
-    WebServer.streamFile(downloadFile, getContentTypeByFileName(uri));
-
-    Serial.printf("文件下载-完成: %s \n", uri.c_str());
+    size_t sendSize = WebServer.streamFile(downloadFile, getContentTypeByFileName(uri));
+    if (sendSize == downloadFile.size())
+    {
+        Serial.printf("文件下载-成功: %s  大小:%d\n", uri.c_str(),sendSize);
+    }
+    else
+    {
+        Serial.printf("文件下载-异常: %s  发送失败！重试中...\n", uri.c_str());
+        size_t sendSize = WebServer.streamFile(downloadFile, getContentTypeByFileName(uri));
+        if (sendSize != downloadFile.size())
+        {
+            Serial.printf("文件下载-失败: %s  重试发送失败！", uri.c_str(), sendSize);
+        }
+    }
+    downloadFile.close();
 }
 
 void WebApi_File_Upload()
