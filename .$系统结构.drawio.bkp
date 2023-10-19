@@ -1,0 +1,144 @@
+<mxfile host="Electron" modified="2023-10-15T11:21:38.203Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="z1fBhqwKAUiRxLcW-EIP" version="21.5.0" type="device">
+  <diagram name="第 1 页" id="-9roXYJXCFThUfEQx-KI">
+    <mxGraphModel dx="875" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-2" value="ESP8266 NodeMcu&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="440" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-3" value="ESP8266" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="90" y="230" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-4" value="WiFi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-5" value="文件系统" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="450" width="95" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-6" value="Web服务器" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="105" y="450" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-7" value="开关控制Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="300" width="113.75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-8" value="网络配置Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="115" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-9" value="灯光自动控制服务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="380" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-10" value="传感器数据采集服务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="380" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-11" value="环境安全监测服务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="380" width="105" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-16" value="GPIO&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="500" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-17" value="外部4MB FLASH" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="613.65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-18" value="CH340串口芯片" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="613.65" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-19" value="AMS1117&lt;br&gt;5V-3.3V电源芯片" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="613.65" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.879;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="kG-vaYD_F3GDJNNZT7Nt-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="413" y="610" as="sourcePoint" />
+            <mxPoint x="410.5" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.327;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="kG-vaYD_F3GDJNNZT7Nt-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="256" y="530" as="sourcePoint" />
+            <mxPoint x="280" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-22" value="RX" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kG-vaYD_F3GDJNNZT7Nt-21">
+          <mxGeometry x="-0.3716" relative="1" as="geometry">
+            <mxPoint y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.665;exitY=-0.008;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.537;entryY=1.028;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kG-vaYD_F3GDJNNZT7Nt-18" target="kG-vaYD_F3GDJNNZT7Nt-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="266" y="560" as="sourcePoint" />
+            <mxPoint x="266" y="596" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-24" value="TX" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kG-vaYD_F3GDJNNZT7Nt-23">
+          <mxGeometry x="-0.1338" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-25" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.11;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.385;exitY=-0.001;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="kG-vaYD_F3GDJNNZT7Nt-19" target="kG-vaYD_F3GDJNNZT7Nt-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="600" as="sourcePoint" />
+            <mxPoint x="150" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-26" value="3.3V+" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kG-vaYD_F3GDJNNZT7Nt-25">
+          <mxGeometry x="0.218" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-27" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.11;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.385;exitY=-0.001;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="615" as="sourcePoint" />
+            <mxPoint x="170" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-28" value="3.3V-" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kG-vaYD_F3GDJNNZT7Nt-27">
+          <mxGeometry x="0.218" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-61" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.003;exitY=0.591;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90.68" y="430" as="sourcePoint" />
+            <mxPoint x="470" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-62" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.004;exitY=0.314;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90.1099999999999" y="359.9999999999999" as="sourcePoint" />
+            <mxPoint x="470" y="361" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-63" value="服务" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-64" value="基础" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-65" value="WebApi服务接口" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="97.5" y="280" width="95" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-66" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.004;exitY=0.314;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90.1099999999999" y="279.9999999999999" as="sourcePoint" />
+            <mxPoint x="470" y="281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-68" value="灯光自动控制Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="102.5" y="330" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-69" value="传感器数据获取Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="330" width="115" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-70" value="环境安全配置Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="330" width="115" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-72" value="文件上传下载Api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="102.5" y="300" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kG-vaYD_F3GDJNNZT7Nt-73" value="WebApp网页" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="101.5" y="240" width="357" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
